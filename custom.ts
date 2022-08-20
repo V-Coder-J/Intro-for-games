@@ -11,7 +11,6 @@ enum MyEnum {
     //% block="two"
     Two
 }
-C: \Users\jwilliams6571.RCS - NOC.000\Downloads\file
 /**
  * Custom blocks
  */
