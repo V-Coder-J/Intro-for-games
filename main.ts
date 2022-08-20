@@ -5,13 +5,21 @@ namespace SpriteKind {
 controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
     if (Game == 1) {
         if (Mode == 3) {
-            Mode = randint(1, 2)
+            Mode = 1
             Choose_Mode()
         } else {
         	
         }
     } else {
     	
+    }
+})
+controller.anyButton.onEvent(ControllerButtonEvent.Pressed, function () {
+    if (Game == 1) {
+        if (Play == 1) {
+            Mode = 1
+            Choose_Mode()
+        }
     }
 })
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
