@@ -2,7 +2,7 @@ namespace SpriteKind {
     export const Background = SpriteKind.create()
     export const Game_Title = SpriteKind.create()
 }
-controller.anyButton.onEvent(ControllerButtonEvent.Pressed, function () {
+controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     if (Play == 0) {
         Play = 1
         Choose_Mode()
@@ -135,7 +135,7 @@ function Game_Intro () {
     })
 }
 function Choose_Mode () {
-	
+    sprites.destroyAllSpritesOfKind(SpriteKind.Game_Title)
 }
 let mySprite7: Sprite = null
 let Play_Button = 0
@@ -338,7 +338,7 @@ game.onUpdateInterval(1, function () {
 forever(function () {
     if (Play_Button == 0) {
     	
-    } else if (Play_Button == 1) {
+    } else if (Play_Button == 1 && Play == 0) {
         mySprite7 = sprites.create(img`
             ...........................................................
             .fff.fff.fff.fff.fff...fff...fff.fff...fff.fff.fff.fff.fff.
