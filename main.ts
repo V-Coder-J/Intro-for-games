@@ -349,5 +349,8 @@ forever(function () {
             ...........................................................
             `, SpriteKind.Game_Title)
         mySprite7.y += 33
+        pause(500)
+        mySprite7.destroy()
+        pause(500)
     }
 })
