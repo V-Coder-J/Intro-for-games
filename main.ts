@@ -36,7 +36,11 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
             } else if (Mode == 2) {
             	
             } else if (Mode == 3) {
-                game.showLongText(game.ask("Are you Sure you want", "to reset the game?"), DialogLayout.Bottom)
+                if (game.ask("Are you Sure you want to", "reset the game?")) {
+                    game.reset()
+                } else {
+                	
+                }
             }
         }
     } else {
