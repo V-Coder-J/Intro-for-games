@@ -2,10 +2,50 @@ namespace SpriteKind {
     export const Background = SpriteKind.create()
     export const Game_Title = SpriteKind.create()
 }
+controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
+    if (Game == 1) {
+        if (Mode == 3) {
+            Mode = randint(1, 2)
+            Choose_Mode()
+        } else {
+        	
+        }
+    } else {
+    	
+    }
+})
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
-    if (Play == 0) {
-        Play = 1
-        Choose_Mode()
+    if (Game == 1) {
+        if (Play == 0) {
+            Play = 1
+            Choose_Mode()
+        }
+    } else {
+    	
+    }
+})
+controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
+    if (Game == 1) {
+        if (Mode == 2) {
+            Mode = 1
+            Choose_Mode()
+        } else {
+        	
+        }
+    } else {
+    	
+    }
+})
+controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
+    if (Game == 1) {
+        if (Mode == 1) {
+            Mode = 2
+            Choose_Mode()
+        } else {
+        	
+        }
+    } else {
+    	
     }
 })
 function Game_Intro () {
@@ -134,6 +174,18 @@ function Game_Intro () {
         Play_Button = 1
     })
 }
+controller.down.onEvent(ControllerButtonEvent.Pressed, function () {
+    if (Game == 1) {
+        if (Mode == 1 || Mode == 2) {
+            Mode = 3
+            Choose_Mode()
+        } else {
+        	
+        }
+    } else {
+    	
+    }
+})
 function Choose_Mode () {
     sprites.destroyAllSpritesOfKind(SpriteKind.Game_Title)
     Title = 0
@@ -172,6 +224,171 @@ function Choose_Mode () {
         ..................................................
         `, SpriteKind.Game_Title)
     mySprite2.x += 30
+    mySprite3 = sprites.create(img`
+        ..........................................
+        ..........................................
+        ..ffffff..ffffff..ffffff..ffffff..ffffff..
+        ..ffffff..ffffff..ffffff..ffffff..ffffff..
+        ..ff..ff..ff......ff......ff........ff....
+        ..ff..ff..ff......ff......ff........ff....
+        ..ffff....ffffff..ffffff..ffffff....ff....
+        ..ffff....ffffff..ffffff..ffffff....ff....
+        ..ff..ff..ff..........ff..ff........ff....
+        ..ff..ff..ff..........ff..ff........ff....
+        ..ff..ff..ffffff..ffffff..ffffff....ff....
+        ..ff..ff..ffffff..ffffff..ffffff....ff....
+        ..........................................
+        ..........................................
+        `, SpriteKind.Game_Title)
+    mySprite3.y += 20
+    if (Mode == 1) {
+        mySprite3.setImage(img`
+            ..........................................
+            ..........................................
+            ..ffffff..ffffff..ffffff..ffffff..ffffff..
+            ..ffffff..ffffff..ffffff..ffffff..ffffff..
+            ..ff..ff..ff......ff......ff........ff....
+            ..ff..ff..ff......ff......ff........ff....
+            ..ffff....ffffff..ffffff..ffffff....ff....
+            ..ffff....ffffff..ffffff..ffffff....ff....
+            ..ff..ff..ff..........ff..ff........ff....
+            ..ff..ff..ff..........ff..ff........ff....
+            ..ff..ff..ffffff..ffffff..ffffff....ff....
+            ..ff..ff..ffffff..ffffff..ffffff....ff....
+            ..........................................
+            ..........................................
+            `)
+        mySprite2.setImage(img`
+            ..................................................
+            ..................................................
+            ..ff..ff..ffffff..ffffff..ffffff..ff..ff..ffffff..
+            ..ff..ff..ffffff..ffffff..ffffff..ff..ff..ffffff..
+            ..ff..ff..ff......ff..ff..ff......ff..ff..ff......
+            ..ff..ff..ff......ff..ff..ff......ff..ff..ff......
+            ..ff..ff..ffffff..ffff....ffffff..ff..ff..ffffff..
+            ..ff..ff..ffffff..ffff....ffffff..ff..ff..ffffff..
+            ..ff..ff..ff......ff..ff......ff..ff..ff......ff..
+            ..ff..ff..ff......ff..ff......ff..ff..ff......ff..
+            ....ff....ffffff..ff..ff..ffffff..ffffff..ffffff..
+            ....ff....ffffff..ff..ff..ffffff..ffffff..ffffff..
+            ..................................................
+            ..................................................
+            `)
+        mySprite.setImage(img`
+            115555555555555555555555555555555555555555
+            115555555555555555555555555555555555555554
+            55ffffff22ffffff22ffffff22ffffff22ff22ff44
+            55ffffff22ffffff22ffffff22ffffff22ff22ff44
+            55ff22222222ff2222ff22ff22ff22ff22ff22ff44
+            55ff22222222ff2222ff22ff22ff22ff22ff22ff44
+            55ffffff2222ff2222ff22ff22ffff2222ffffff44
+            55ffffff2222ff2222ff22ff22ffff2222ffffff44
+            552222ff2222ff2222ff22ff22ff22ff2222ff2244
+            552222ff2222ff2222ff22ff22ff22ff2222ff2244
+            55ffffff2222ff2222ffffff22ff22ff2222ff2244
+            55ffffff2222ff2222ffffff22ff22ff2222ff2244
+            544444444444444444444444444444444444444422
+            444444444444444444444444444444444444444422
+            `)
+    } else if (Mode == 2) {
+        mySprite.setImage(img`
+            ..........................................
+            ..........................................
+            ..ffffff..ffffff..ffffff..ffffff..ff..ff..
+            ..ffffff..ffffff..ffffff..ffffff..ff..ff..
+            ..ff........ff....ff..ff..ff..ff..ff..ff..
+            ..ff........ff....ff..ff..ff..ff..ff..ff..
+            ..ffffff....ff....ff..ff..ffff....ffffff..
+            ..ffffff....ff....ff..ff..ffff....ffffff..
+            ......ff....ff....ff..ff..ff..ff....ff....
+            ......ff....ff....ff..ff..ff..ff....ff....
+            ..ffffff....ff....ffffff..ff..ff....ff....
+            ..ffffff....ff....ffffff..ff..ff....ff....
+            ..........................................
+            ..........................................
+            `)
+        mySprite3.setImage(img`
+            ..........................................
+            ..........................................
+            ..ffffff..ffffff..ffffff..ffffff..ffffff..
+            ..ffffff..ffffff..ffffff..ffffff..ffffff..
+            ..ff..ff..ff......ff......ff........ff....
+            ..ff..ff..ff......ff......ff........ff....
+            ..ffff....ffffff..ffffff..ffffff....ff....
+            ..ffff....ffffff..ffffff..ffffff....ff....
+            ..ff..ff..ff..........ff..ff........ff....
+            ..ff..ff..ff..........ff..ff........ff....
+            ..ff..ff..ffffff..ffffff..ffffff....ff....
+            ..ff..ff..ffffff..ffffff..ffffff....ff....
+            ..........................................
+            ..........................................
+            `)
+        mySprite2.setImage(img`
+            77999999999999999999999999999999999999999999999999
+            77999999999999999999999999999999999999999999999996
+            99ff88ff88ffffff88ffffff88ffffff88ff88ff88ffffff66
+            99ff88ff88ffffff88ffffff88ffffff88ff88ff88ffffff66
+            99ff88ff88ff888888ff88ff88ff888888ff88ff88ff888866
+            99ff88ff88ff888888ff88ff88ff888888ff88ff88ff888866
+            99ff88ff88ffffff88ffff8888ffffff88ff88ff88ffffff66
+            99ff88ff88ffffff88ffff8888ffffff88ff88ff88ffffff66
+            99ff88ff88ff888888ff88ff888888ff88ff88ff888888ff66
+            99ff88ff88ff888888ff88ff888888ff88ff88ff888888ff66
+            9988ff8888ffffff88ff88ff88ffffff88ffffff88ffffff66
+            9988ff8888ffffff88ff88ff88ffffff88ffffff88ffffff66
+            96666666666666666666666666666666666666666666666688
+            66666666666666666666666666666666666666666666666688
+            `)
+    } else if (Mode == 3) {
+        mySprite2.setImage(img`
+            ..................................................
+            ..................................................
+            ..ff..ff..ffffff..ffffff..ffffff..ff..ff..ffffff..
+            ..ff..ff..ffffff..ffffff..ffffff..ff..ff..ffffff..
+            ..ff..ff..ff......ff..ff..ff......ff..ff..ff......
+            ..ff..ff..ff......ff..ff..ff......ff..ff..ff......
+            ..ff..ff..ffffff..ffff....ffffff..ff..ff..ffffff..
+            ..ff..ff..ffffff..ffff....ffffff..ff..ff..ffffff..
+            ..ff..ff..ff......ff..ff......ff..ff..ff......ff..
+            ..ff..ff..ff......ff..ff......ff..ff..ff......ff..
+            ....ff....ffffff..ff..ff..ffffff..ffffff..ffffff..
+            ....ff....ffffff..ff..ff..ffffff..ffffff..ffffff..
+            ..................................................
+            ..................................................
+            `)
+        mySprite.setImage(img`
+            ..........................................
+            ..........................................
+            ..ffffff..ffffff..ffffff..ffffff..ff..ff..
+            ..ffffff..ffffff..ffffff..ffffff..ff..ff..
+            ..ff........ff....ff..ff..ff..ff..ff..ff..
+            ..ff........ff....ff..ff..ff..ff..ff..ff..
+            ..ffffff....ff....ff..ff..ffff....ffffff..
+            ..ffffff....ff....ff..ff..ffff....ffffff..
+            ......ff....ff....ff..ff..ff..ff....ff....
+            ......ff....ff....ff..ff..ff..ff....ff....
+            ..ffffff....ff....ffffff..ff..ff....ff....
+            ..ffffff....ff....ffffff..ff..ff....ff....
+            ..........................................
+            ..........................................
+            `)
+        mySprite3.setImage(img`
+            ddbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+            ddbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbba
+            bbffffffccffffffccffffffccffffffccffffffaa
+            bbffffffccffffffccffffffccffffffccffffffaa
+            bbffccffccffccccccffccccccffccccccccffccaa
+            bbffccffccffccccccffccccccffccccccccffccaa
+            bbffffccccffffffccffffffccffffffccccffccaa
+            bbffffccccffffffccffffffccffffffccccffccaa
+            bbffccffccffccccccccccffccffccccccccffccaa
+            bbffccffccffccccccccccffccffccccccccffccaa
+            bbffccffccffffffccffffffccffffffccccffccaa
+            bbffccffccffffffccffffffccffffffccccffccaa
+            baaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacc
+            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacc
+            `)
+    }
 }
 let mySprite7: Sprite = null
 let Play_Button = 0
@@ -182,6 +399,8 @@ let mySprite3: Sprite = null
 let mySprite2: Sprite = null
 let mySprite: Sprite = null
 let Title = 0
+let Mode = 0
+let Game = 0
 let Play = 0
 scene.setBackgroundImage(img`
     1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
@@ -388,5 +607,6 @@ forever(function () {
         pause(500)
         mySprite7.destroy()
         pause(500)
+        Game = 1
     }
 })
