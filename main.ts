@@ -32,9 +32,9 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
             Choose_Mode()
         } else if (Play == 1) {
             if (Mode == 1) {
-            	
+                sprites.destroyAllSpritesOfKind(SpriteKind.Game_Title)
             } else if (Mode == 2) {
-            	
+                sprites.destroyAllSpritesOfKind(SpriteKind.Game_Title)
             } else if (Mode == 3) {
                 if (game.ask("Are you Sure you want to", "reset the game?")) {
                     game.reset()
