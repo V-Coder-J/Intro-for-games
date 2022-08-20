@@ -17,8 +17,11 @@ controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
 controller.anyButton.onEvent(ControllerButtonEvent.Pressed, function () {
     if (Game == 1) {
         if (Play == 1) {
-            Mode = 1
-            Choose_Mode()
+            if (Mode_Choosing == 0) {
+                Mode = 1
+                Choose_Mode()
+                Mode_Choosing = 1
+            }
         }
     }
 })
@@ -27,6 +30,14 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
         if (Play == 0) {
             Play = 1
             Choose_Mode()
+        } else if (Play == 1) {
+            if (Mode == 1) {
+            	
+            } else if (Mode == 2) {
+            	
+            } else if (Mode == 3) {
+                game.showLongText(game.ask("Are you Sure you want", "to reset the game?"), DialogLayout.Bottom)
+            }
         }
     } else {
     	
@@ -407,6 +418,7 @@ let mySprite3: Sprite = null
 let mySprite2: Sprite = null
 let mySprite: Sprite = null
 let Title = 0
+let Mode_Choosing = 0
 let Mode = 0
 let Game = 0
 let Play = 0
