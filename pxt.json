@@ -19,7 +19,9 @@
         "main.ts",
         "README.md",
         "assets.json",
-        "custom.ts"
+        "custom.ts",
+        "tilemap.g.jres",
+        "tilemap.g.ts"
     ],
     "testFiles": [
         "test.ts"
@@ -44,7 +46,7 @@
         "#003fad",
         "#87f2ff",
         "#8e2ec4",
-        "#dddddd",
+        "#edb879",
         "#aaaaaa",
         "#888888",
         "#444444",
