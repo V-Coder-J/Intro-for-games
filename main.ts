@@ -2,6 +2,9 @@ namespace SpriteKind {
     export const Background = SpriteKind.create()
     export const Game_Title = SpriteKind.create()
 }
+function Male__Barbarian () {
+	
+}
 controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
     if (Game == 1) {
         if (Mode == 3) {
@@ -202,7 +205,10 @@ controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
     	
     }
 })
-function Male__Barbarian () {
+function Fire__Wizard () {
+	
+}
+function Water__Wizard () {
 	
 }
 controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
@@ -217,81 +223,6 @@ controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
     	
     }
 })
-function Player_Character () {
-    if (PCG == 1) {
-        if (PCC == 1) {
-        	
-        } else if (PCC == 2) {
-            if (PCT == 1) {
-            	
-            } else if (PCT == 2) {
-            	
-            } else if (PCT == 3) {
-            	
-            } else if (PCT == 4) {
-            	
-            } else if (PCT == 5) {
-            	
-            }
-        } else if (PCC == 3) {
-        	
-        } else if (PCC == 4) {
-        	
-        } else if (PCC == 5) {
-            if (PCT == 1) {
-            	
-            } else if (PCT == 2) {
-            	
-            } else if (PCT == 3) {
-            	
-            } else if (PCT == 4) {
-            	
-            } else if (PCT == 5) {
-            	
-            }
-        } else if (PCC == 6) {
-        	
-        } else if (PCC == 7) {
-        	
-        }
-    } else if (PCG == 2) {
-        if (PCC == 1) {
-        	
-        } else if (PCC == 2) {
-            if (PCT == 1) {
-            	
-            } else if (PCT == 2) {
-            	
-            } else if (PCT == 3) {
-            	
-            } else if (PCT == 4) {
-            	
-            } else if (PCT == 5) {
-            	
-            }
-        } else if (PCC == 3) {
-        	
-        } else if (PCC == 4) {
-        	
-        } else if (PCC == 5) {
-            if (PCT == 1) {
-            	
-            } else if (PCT == 2) {
-            	
-            } else if (PCT == 3) {
-            	
-            } else if (PCT == 4) {
-            	
-            } else if (PCT == 5) {
-            	
-            }
-        } else if (PCC == 6) {
-        	
-        } else if (PCC == 7) {
-        	
-        }
-    }
-}
 function Game_Intro () {
     Title = 1
     mySprite = sprites.create(img`
@@ -632,6 +563,81 @@ function Choose_Mode () {
             cdddddddddddddddddddddddddddddddddddddddee
             ddddddddddddddddddddddddddddddddddddddddee
             `)
+    }
+}
+function Player_Character () {
+    if (PCG == 1) {
+        if (PCC == 1) {
+            Male__Barbarian()
+        } else if (PCC == 2) {
+            if (PCT == 1) {
+            	
+            } else if (PCT == 2) {
+            	
+            } else if (PCT == 3) {
+            	
+            } else if (PCT == 4) {
+            	
+            } else if (PCT == 5) {
+            	
+            }
+        } else if (PCC == 3) {
+        	
+        } else if (PCC == 4) {
+        	
+        } else if (PCC == 5) {
+            if (PCT == 1) {
+            	
+            } else if (PCT == 2) {
+            	
+            } else if (PCT == 3) {
+            	
+            } else if (PCT == 4) {
+            	
+            } else if (PCT == 5) {
+            	
+            }
+        } else if (PCC == 6) {
+        	
+        } else if (PCC == 7) {
+        	
+        }
+    } else if (PCG == 2) {
+        if (PCC == 1) {
+        	
+        } else if (PCC == 2) {
+            if (PCT == 1) {
+            	
+            } else if (PCT == 2) {
+            	
+            } else if (PCT == 3) {
+            	
+            } else if (PCT == 4) {
+            	
+            } else if (PCT == 5) {
+            	
+            }
+        } else if (PCC == 3) {
+        	
+        } else if (PCC == 4) {
+        	
+        } else if (PCC == 5) {
+            if (PCT == 1) {
+            	
+            } else if (PCT == 2) {
+            	
+            } else if (PCT == 3) {
+            	
+            } else if (PCT == 4) {
+            	
+            } else if (PCT == 5) {
+            	
+            }
+        } else if (PCC == 6) {
+        	
+        } else if (PCC == 7) {
+        	
+        }
     }
 }
 let mySprite7: Sprite = null
