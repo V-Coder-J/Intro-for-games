@@ -38,109 +38,141 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
                 game.showLongText("What gender is your Character?", DialogLayout.Top)
                 story.showPlayerChoices("Male", "Female")
                 if (story.checkLastAnswer("Male")) {
+                    PCG = 1
                     game.showLongText("What is your Character?", DialogLayout.Top)
                     story.showPlayerChoices("Barbarian", "Wizard", "Skeleton", "Paladin, Dragon, Archer, or Rogue")
                     if (story.checkLastAnswer("Barbarian")) {
                         PCC = 1
+                        Player_Character()
                     } else if (story.checkLastAnswer("Wizard")) {
                         PCC = 2
                         game.showLongText("What type of wizard?", DialogLayout.Top)
                         story.showPlayerChoices("Fire", "Water", "Ice", "Lightning or Poison")
                         if (story.checkLastAnswer("Fire")) {
                             PCT = 1
+                            Player_Character()
                         } else if (story.checkLastAnswer("Water")) {
                             PCT = 2
+                            Player_Character()
                         } else if (story.checkLastAnswer("Ice")) {
                             PCT = 3
+                            Player_Character()
                         } else if (story.checkLastAnswer("Lightning or Poison")) {
                             story.showPlayerChoices("Lightning", "Poison")
                             if (story.checkLastAnswer("Lightning")) {
                                 PCT = 4
+                                Player_Character()
                             } else if (story.checkLastAnswer("Poison")) {
                                 PCT = 5
+                                Player_Character()
                             }
                         }
                     } else if (story.checkLastAnswer("Skeleton")) {
                         PCC = 3
+                        Player_Character()
                     } else if (story.checkLastAnswer("Paladin, Dragon, Archer, or Rogue")) {
                         story.showPlayerChoices("Paladin", "Dragon", "Archer", "Rogue")
                         if (story.checkLastAnswer("Paladin")) {
                             PCC = 4
+                            Player_Character()
                         } else if (story.checkLastAnswer("Dragon")) {
                             PCC = 5
                             game.showLongText("What type of dragon?", DialogLayout.Top)
                             story.showPlayerChoices("Fire", "Water", "Ice", "Lightning or Poison")
                             if (story.checkLastAnswer("Fire")) {
                                 PCT = 1
+                                Player_Character()
                             } else if (story.checkLastAnswer("Water")) {
                                 PCT = 2
+                                Player_Character()
                             } else if (story.checkLastAnswer("Ice")) {
                                 PCT = 3
+                                Player_Character()
                             } else if (story.checkLastAnswer("Lightning or Poison")) {
                                 story.showPlayerChoices("Lightning", "Poison")
                                 if (story.checkLastAnswer("Lightning")) {
                                     PCT = 4
+                                    Player_Character()
                                 } else if (story.checkLastAnswer("Poison")) {
                                     PCT = 5
+                                    Player_Character()
                                 }
                             }
                         } else if (story.checkLastAnswer("Archer")) {
                             PCC = 6
+                            Player_Character()
                         } else if (story.checkLastAnswer("Rogue")) {
                             PCC = 7
+                            Player_Character()
                         }
                     }
                 } else if (story.checkLastAnswer("Female")) {
+                    PCG = 2
                     game.showLongText("What is your Character?", DialogLayout.Top)
                     story.showPlayerChoices("Barbarian", "Witch", "Skeleton", "Paladin, Dragon, Archer, or Rogue")
                     if (story.checkLastAnswer("Barbarian")) {
                         PCC = 1
+                        Player_Character()
                     } else if (story.checkLastAnswer("Witch")) {
                         PCC = 2
                         game.showLongText("What type of witch?", DialogLayout.Top)
                         story.showPlayerChoices("Fire", "Water", "Ice", "Lightning or Poison")
                         if (story.checkLastAnswer("Fire")) {
                             PCT = 1
+                            Player_Character()
                         } else if (story.checkLastAnswer("Water")) {
                             PCT = 2
+                            Player_Character()
                         } else if (story.checkLastAnswer("Ice")) {
                             PCT = 3
+                            Player_Character()
                         } else if (story.checkLastAnswer("Lightning or Poison")) {
                             story.showPlayerChoices("Lightning", "Poison")
                             if (story.checkLastAnswer("Lightning")) {
                                 PCT = 4
+                                Player_Character()
                             } else if (story.checkLastAnswer("Poison")) {
                                 PCT = 5
+                                Player_Character()
                             }
                         }
                     } else if (story.checkLastAnswer("Skeleton")) {
                         PCC = 3
+                        Player_Character()
                     } else if (story.checkLastAnswer("Paladin, Dragon, Archer, or Rogue")) {
                         story.showPlayerChoices("Paladin", "Dragon", "Archer", "Rogue")
                         if (story.checkLastAnswer("Paladin")) {
                             PCC = 4
+                            Player_Character()
                         } else if (story.checkLastAnswer("Dragon")) {
                             PCC = 5
                             game.showLongText("What type of dragon?", DialogLayout.Top)
                             story.showPlayerChoices("Fire", "Water", "Ice", "Lightning or Poison")
                             if (story.checkLastAnswer("Fire")) {
                                 PCT = 1
+                                Player_Character()
                             } else if (story.checkLastAnswer("Water")) {
                                 PCT = 2
+                                Player_Character()
                             } else if (story.checkLastAnswer("Ice")) {
                                 PCT = 3
+                                Player_Character()
                             } else if (story.checkLastAnswer("Lightning or Poison")) {
                                 story.showPlayerChoices("Lightning", "Poison")
                                 if (story.checkLastAnswer("Lightning")) {
                                     PCT = 4
+                                    Player_Character()
                                 } else if (story.checkLastAnswer("Poison")) {
                                     PCT = 5
+                                    Player_Character()
                                 }
                             }
                         } else if (story.checkLastAnswer("Archer")) {
                             PCC = 6
+                            Player_Character()
                         } else if (story.checkLastAnswer("Rogue")) {
                             PCC = 7
+                            Player_Character()
                         }
                     }
                 }
@@ -170,6 +202,9 @@ controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
     	
     }
 })
+function Male__Barbarian () {
+	
+}
 controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
     if (Game == 1) {
         if (Mode == 1) {
@@ -182,6 +217,81 @@ controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
     	
     }
 })
+function Player_Character () {
+    if (PCG == 1) {
+        if (PCC == 1) {
+        	
+        } else if (PCC == 2) {
+            if (PCT == 1) {
+            	
+            } else if (PCT == 2) {
+            	
+            } else if (PCT == 3) {
+            	
+            } else if (PCT == 4) {
+            	
+            } else if (PCT == 5) {
+            	
+            }
+        } else if (PCC == 3) {
+        	
+        } else if (PCC == 4) {
+        	
+        } else if (PCC == 5) {
+            if (PCT == 1) {
+            	
+            } else if (PCT == 2) {
+            	
+            } else if (PCT == 3) {
+            	
+            } else if (PCT == 4) {
+            	
+            } else if (PCT == 5) {
+            	
+            }
+        } else if (PCC == 6) {
+        	
+        } else if (PCC == 7) {
+        	
+        }
+    } else if (PCG == 2) {
+        if (PCC == 1) {
+        	
+        } else if (PCC == 2) {
+            if (PCT == 1) {
+            	
+            } else if (PCT == 2) {
+            	
+            } else if (PCT == 3) {
+            	
+            } else if (PCT == 4) {
+            	
+            } else if (PCT == 5) {
+            	
+            }
+        } else if (PCC == 3) {
+        	
+        } else if (PCC == 4) {
+        	
+        } else if (PCC == 5) {
+            if (PCT == 1) {
+            	
+            } else if (PCT == 2) {
+            	
+            } else if (PCT == 3) {
+            	
+            } else if (PCT == 4) {
+            	
+            } else if (PCT == 5) {
+            	
+            }
+        } else if (PCC == 6) {
+        	
+        } else if (PCC == 7) {
+        	
+        }
+    }
+}
 function Game_Intro () {
     Title = 1
     mySprite = sprites.create(img`
@@ -535,6 +645,7 @@ let mySprite: Sprite = null
 let Title = 0
 let PCT = 0
 let PCC = 0
+let PCG = 0
 let C_Name = ""
 let Mode_Choosing = 0
 let Mode = 0
