@@ -213,27 +213,244 @@ function Male__Barbarian () {
     }
 }
 function Levels () {
-    Level = 1
-    if (Level == 1) {
-        tiles.setCurrentTilemap(tilemap`level2`)
-        Level += 1
-    } else if (Level == 2) {
-        tiles.setCurrentTilemap(tilemap`level2`)
-        Level += 1
-    } else if (Level == 3) {
-        tiles.setCurrentTilemap(tilemap`level2`)
-        Level += 1
-    } else if (Level == 4) {
-        tiles.setCurrentTilemap(tilemap`level2`)
-        Level += 1
-    } else if (Level == 5) {
-        tiles.setCurrentTilemap(tilemap`level2`)
-        Level += 1
-    } else if (Level == 6) {
-        tiles.setCurrentTilemap(tilemap`level2`)
-        Level += 1
-    } else {
-    	
+    if (World == 1) {
+        blockSettings.writeNumber("World", World)
+        if (Level == 1) {
+            tiles.setCurrentTilemap(tilemap`level2`)
+            blockSettings.writeNumber("Level", Level)
+            Level += 1
+        } else if (Level == 2) {
+            tiles.setCurrentTilemap(tilemap`level2`)
+            blockSettings.writeNumber("Level", Level)
+            Level += 1
+        } else if (Level == 3) {
+            tiles.setCurrentTilemap(tilemap`level2`)
+            blockSettings.writeNumber("Level", Level)
+            Level += 1
+        } else if (Level == 4) {
+            tiles.setCurrentTilemap(tilemap`level2`)
+            blockSettings.writeNumber("Level", Level)
+            Level += 1
+        } else if (Level == 5) {
+            tiles.setCurrentTilemap(tilemap`level2`)
+            blockSettings.writeNumber("Level", Level)
+            Level += 1
+        } else if (Level == 6) {
+            tiles.setCurrentTilemap(tilemap`level2`)
+            blockSettings.writeNumber("Level", Level)
+            Level += 1
+        } else if (Level == 7) {
+            tiles.setCurrentTilemap(tilemap`level2`)
+            blockSettings.writeNumber("Level", Level)
+            Level += 1
+        } else if (Level == 8) {
+            World += 1
+            Level = 1
+            Levels()
+        }
+    } else if (World == 2) {
+        blockSettings.writeNumber("World", World)
+        if (Level == 1) {
+            tiles.setCurrentTilemap(tilemap`level2`)
+            blockSettings.writeNumber("Level", Level)
+            Level += 1
+        } else if (Level == 2) {
+            tiles.setCurrentTilemap(tilemap`level2`)
+            blockSettings.writeNumber("Level", Level)
+            Level += 1
+        } else if (Level == 3) {
+            tiles.setCurrentTilemap(tilemap`level2`)
+            blockSettings.writeNumber("Level", Level)
+            Level += 1
+        } else if (Level == 4) {
+            tiles.setCurrentTilemap(tilemap`level2`)
+            blockSettings.writeNumber("Level", Level)
+            Level += 1
+        } else if (Level == 5) {
+            tiles.setCurrentTilemap(tilemap`level2`)
+            blockSettings.writeNumber("Level", Level)
+            Level += 1
+        } else if (Level == 6) {
+            tiles.setCurrentTilemap(tilemap`level2`)
+            blockSettings.writeNumber("Level", Level)
+            Level += 1
+        } else if (Level == 7) {
+            tiles.setCurrentTilemap(tilemap`level2`)
+            blockSettings.writeNumber("Level", Level)
+            Level += 1
+        } else if (Level == 8) {
+            World += 1
+            Level = 1
+        }
+    } else if (World == 3) {
+        blockSettings.writeNumber("World", World)
+        if (Level == 1) {
+            tiles.setCurrentTilemap(tilemap`level2`)
+            blockSettings.writeNumber("Level", Level)
+            Level += 1
+        } else if (Level == 2) {
+            tiles.setCurrentTilemap(tilemap`level2`)
+            blockSettings.writeNumber("Level", Level)
+            Level += 1
+        } else if (Level == 3) {
+            tiles.setCurrentTilemap(tilemap`level2`)
+            blockSettings.writeNumber("Level", Level)
+            Level += 1
+        } else if (Level == 4) {
+            tiles.setCurrentTilemap(tilemap`level2`)
+            blockSettings.writeNumber("Level", Level)
+            Level += 1
+        } else if (Level == 5) {
+            tiles.setCurrentTilemap(tilemap`level2`)
+            blockSettings.writeNumber("Level", Level)
+            Level += 1
+        } else if (Level == 6) {
+            tiles.setCurrentTilemap(tilemap`level2`)
+            blockSettings.writeNumber("Level", Level)
+            Level += 1
+        } else if (Level == 7) {
+            tiles.setCurrentTilemap(tilemap`level2`)
+            blockSettings.writeNumber("Level", Level)
+            Level += 1
+        } else if (Level == 8) {
+            World += 1
+            Level = 1
+        }
+    } else if (World == 4) {
+        blockSettings.writeNumber("World", World)
+        if (Level == 1) {
+            tiles.setCurrentTilemap(tilemap`level2`)
+            blockSettings.writeNumber("Level", Level)
+            Level += 1
+        } else if (Level == 2) {
+            tiles.setCurrentTilemap(tilemap`level2`)
+            blockSettings.writeNumber("Level", Level)
+            Level += 1
+        } else if (Level == 3) {
+            tiles.setCurrentTilemap(tilemap`level2`)
+            blockSettings.writeNumber("Level", Level)
+            Level += 1
+        } else if (Level == 4) {
+            tiles.setCurrentTilemap(tilemap`level2`)
+            blockSettings.writeNumber("Level", Level)
+            Level += 1
+        } else if (Level == 5) {
+            tiles.setCurrentTilemap(tilemap`level2`)
+            blockSettings.writeNumber("Level", Level)
+            Level += 1
+        } else if (Level == 6) {
+            tiles.setCurrentTilemap(tilemap`level2`)
+            blockSettings.writeNumber("Level", Level)
+            Level += 1
+        } else if (Level == 7) {
+            tiles.setCurrentTilemap(tilemap`level2`)
+            blockSettings.writeNumber("Level", Level)
+            Level += 1
+        } else if (Level == 8) {
+            World += 1
+            Level = 1
+        }
+    } else if (World == 5) {
+        blockSettings.writeNumber("World", World)
+        if (Level == 1) {
+            tiles.setCurrentTilemap(tilemap`level2`)
+            blockSettings.writeNumber("Level", Level)
+            Level += 1
+        } else if (Level == 2) {
+            tiles.setCurrentTilemap(tilemap`level2`)
+            blockSettings.writeNumber("Level", Level)
+            Level += 1
+        } else if (Level == 3) {
+            tiles.setCurrentTilemap(tilemap`level2`)
+            blockSettings.writeNumber("Level", Level)
+            Level += 1
+        } else if (Level == 4) {
+            tiles.setCurrentTilemap(tilemap`level2`)
+            blockSettings.writeNumber("Level", Level)
+            Level += 1
+        } else if (Level == 5) {
+            tiles.setCurrentTilemap(tilemap`level2`)
+            blockSettings.writeNumber("Level", Level)
+            Level += 1
+        } else if (Level == 6) {
+            tiles.setCurrentTilemap(tilemap`level2`)
+            blockSettings.writeNumber("Level", Level)
+            Level += 1
+        } else if (Level == 7) {
+            tiles.setCurrentTilemap(tilemap`level2`)
+            blockSettings.writeNumber("Level", Level)
+            Level += 1
+        } else if (Level == 8) {
+            World += 1
+            Level = 1
+        }
+    } else if (World == 6) {
+        blockSettings.writeNumber("World", World)
+        if (Level == 1) {
+            tiles.setCurrentTilemap(tilemap`level2`)
+            blockSettings.writeNumber("Level", Level)
+            Level += 1
+        } else if (Level == 2) {
+            tiles.setCurrentTilemap(tilemap`level2`)
+            blockSettings.writeNumber("Level", Level)
+            Level += 1
+        } else if (Level == 3) {
+            tiles.setCurrentTilemap(tilemap`level2`)
+            blockSettings.writeNumber("Level", Level)
+            Level += 1
+        } else if (Level == 4) {
+            tiles.setCurrentTilemap(tilemap`level2`)
+            blockSettings.writeNumber("Level", Level)
+            Level += 1
+        } else if (Level == 5) {
+            tiles.setCurrentTilemap(tilemap`level2`)
+            blockSettings.writeNumber("Level", Level)
+            Level += 1
+        } else if (Level == 6) {
+            tiles.setCurrentTilemap(tilemap`level2`)
+            blockSettings.writeNumber("Level", Level)
+            Level += 1
+        } else if (Level == 7) {
+            tiles.setCurrentTilemap(tilemap`level2`)
+            blockSettings.writeNumber("Level", Level)
+            Level += 1
+        } else if (Level == 8) {
+            World += 1
+            Level = 1
+        }
+    } else if (World == 7) {
+        blockSettings.writeNumber("World", World)
+        if (Level == 1) {
+            tiles.setCurrentTilemap(tilemap`level2`)
+            blockSettings.writeNumber("Level", Level)
+            Level += 1
+        } else if (Level == 2) {
+            tiles.setCurrentTilemap(tilemap`level2`)
+            blockSettings.writeNumber("Level", Level)
+            Level += 1
+        } else if (Level == 3) {
+            tiles.setCurrentTilemap(tilemap`level2`)
+            blockSettings.writeNumber("Level", Level)
+            Level += 1
+        } else if (Level == 4) {
+            tiles.setCurrentTilemap(tilemap`level2`)
+            blockSettings.writeNumber("Level", Level)
+            Level += 1
+        } else if (Level == 5) {
+            tiles.setCurrentTilemap(tilemap`level2`)
+            blockSettings.writeNumber("Level", Level)
+            Level += 1
+        } else if (Level == 6) {
+            tiles.setCurrentTilemap(tilemap`level2`)
+            blockSettings.writeNumber("Level", Level)
+            Level += 1
+        } else if (Level == 7) {
+            tiles.setCurrentTilemap(tilemap`level2`)
+            blockSettings.writeNumber("Level", Level)
+            Level += 1
+        } else if (Level == 8) {
+            game.splash("Story Completed")
+        }
     }
 }
 controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
@@ -1753,6 +1970,7 @@ let Mode_Choosing = 0
 let Mode = 0
 let Game = 0
 let Level = 0
+let World = 0
 let PC = 0
 let PCT = 0
 let PCC = 0
