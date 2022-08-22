@@ -1774,6 +1774,8 @@ function Player_Character () {
         } else if (PCC == 7) {
         	
         }
+    } else {
+    	
     }
 }
 function Load_Game () {
@@ -2170,6 +2172,8 @@ game.onUpdateInterval(1, function () {
     if (PC == 1) {
         blockSettings.writeNumber("Player_X", mySprite8.x)
         blockSettings.writeNumber("Player_Y", mySprite8.y)
+    } else {
+    	
     }
 })
 forever(function () {
